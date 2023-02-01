@@ -1,0 +1,270 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Theme */
+:root {
+    --base-font-size: 62.5%;
+    --base-font-size-em: 0.625em;
+    --base-line-height: 1.3;
+    --base-spacing-xs: 0.4rem;
+    --base-spacing-sm: 0.8rem;
+    --base-spacing-md: 1.6rem;
+    --base-spacing-lg: 2.2rem;
+    --base-spacing-xl: 3.6rem;
+    --before-h2-background: linear-gradient(180deg, #007aff 0%, #003ffc 98.75%);
+    --box-shadow-table-wrapper: inset -0.2rem 0 0.2rem rgb(0 0 0 / 25%);
+    --color-gallery: #ececec;
+    --color-geyser: #d9dfe7;
+    --color-prussian-blue: #00265a;
+    --color-selago: #e8eefb;
+    --color-tropical-blue: #d9e5f9;
+    --color-white: #fff;
+    --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    --font-body: montserrat, var(--font-fallback);
+    --text-color-primary: var(--color-prussian-blue);
+    --type-base-font-size: 1.6rem;
+    --type-base-font-size-text: 1.2rem;
+    --type-base-font-size-text-xs: 1rem;
+    --type-base-text: 500 var(--type-base-font-size-text) / var(--base-line-height) var(--font-body);
+    --type-base-small-text: 500 var(--type-base-font-size-text-xs) / var(--base-line-height) var(--font-body);
+    --type-h2: 600 var(--type-base-font-size) / var(--base-line-height) var(--font-body);
+    --type-h2-before: 800 var(--type-base-font-size-text) / var(--base-line-height) var(--font-body);
+    --type-table-td-text: var(--type-base-small-text);
+    --type-table-th-text: 600 var(--type-base-font-size-text-xs) / var(--base-line-height) var(--font-body);
+}
+
+html {
+    font-family: var(--font-body);
+    font-size: var(--base-font-size);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--text-color-primary);
+    font-family: var(--font-body);
+    font-size: var(----type-base-font-size);
+    line-height: var(--base-line-height);
+    text-rendering: optimizeSpeed;
+}
+
+/* Generic */
+.visually-hidden {
+    clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+    clip-path: inset(50%);
+    height: 0.1rem;
+    margin: -0.1rem;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 0.1rem;
+}
+
+.section-wrapper {
+    padding: var(--base-spacing-md);
+}
+
+.divider {
+    background-color: var(--color-geyser);
+    border: 0;
+    height: 0.1rem;
+    margin: 0 var(--base-spacing-md);
+}
+
+.mb-md {
+    margin-bottom: var(--base-spacing-md);
+}
+
+/* Heading */
+.heading-h2 {
+    font: var(--type-h2);
+    margin-bottom: var(--base-spacing-sm);
+    padding-left: var(--base-spacing-xl);
+    position: relative;
+}
+
+.heading-h2::before {
+    align-items: center;
+    background: var(--before-h2-background);
+    border-radius: 50%;
+    color: var(--color-white);
+    display: flex;
+    font: var(--type-h2-before);
+    height: 2rem;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+}
+
+.heading-h2--1::before {
+    content: "1";
+}
+
+.heading-h2--2::before {
+    content: "2";
+}
+
+.heading-h2--3::before {
+    content: "3";
+}
+
+/* Paragraph */
+.paragraph-text {
+    font: var(--type-base-text);
+}
+
+/* Lists */
+.caption-list {
+    font: var(--type-base-small-text);
+    margin-top: var(--base-spacing-xs);
+}
+
+.prono-list {
+    font: var(--type-base-text);
+}
+
+.prono-list__item {
+    border-bottom: 0.05rem solid var(--color-geyser);
+    padding: var(--base-spacing-xs) 0 var(--base-spacing-xs) var(--base-spacing-lg);
+    position: relative;
+}
+
+.prono-list__item::before {
+    background: no-repeat center url(chevron.svg) var(--color-prussian-blue);
+    border-radius: 50%;
+    color: var(--color-white);
+    content: "";
+    font: var(--type-h2-before);
+    height: 1.4rem;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.4rem;
+}
+
+/* Table */
+.table-wrapper {
+    border: 0.1rem solid var(--color-geyser);
+    border-radius: 0.4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 450px) {
+    .table-wrapper--with-box-shadow {
+        box-shadow: var(--box-shadow-table-wrapper);
+    }
+
+    .table-wrapper--with-box-shadow > .bet-table {
+        min-width: 417px;
+    }
+}
+
+.bet-table {
+    border-collapse: collapse;
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.bet-table tr {
+    border-top: 0.1rem solid var(--color-geyser);
+}
+
+.bet-table tr:first-of-type {
+    border-color: var(--color-white);
+}
+
+.bet-table thead tr {
+    border: 0;
+}
+
+.bet-table th {
+    font: var(--type-table-th-text);
+}
+
+.bet-table thead th {
+    background-color: var(--color-gallery);
+    border-left: 0.1rem solid var(--color-white);
+    height: 4.4rem;
+    padding: var(--base-spacing-xs);
+}
+
+.bet-table thead th:first-of-type {
+    background-color: var(--color-tropical-blue);
+    border-left: 0;
+    left: 0;
+    position: sticky;
+}
+
+.bet-table tbody th {
+    background-color: var(--color-selago);
+    left: 0;
+    padding: 0 var(--base-spacing-xs);
+    position: sticky;
+}
+
+.bet-table td {
+    background-color: var(--color-white);
+    font: var(--type-table-td-text);
+    height: 5.6rem;
+    padding: 0 var(--base-spacing-xs);
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .bet-table--1 th:nth-child(1) {
+        width: 6rem;
+    }
+    
+    .bet-table--1 th:nth-child(2) {
+        width: 7rem;
+    }
+    
+    .bet-table--2 th:nth-child(1) {
+        width: 7.2rem;
+    }
+    
+    .bet-table--2 th:nth-child(2) {
+        width: 8rem;
+    }
+    
+    .bet-table--2 th:nth-child(3),
+    .bet-table--2 th:nth-child(4) {
+        width: 8.7rem;
+    }
+    
+    .bet-table--2 th:nth-child(5) {
+        width: 9rem;
+    }
+    
+    .bet-table--3 th {
+        width: 5.4rem;
+    }
+    
+    .bet-table--3 th:first-of-type {
+        width: 10rem;
+    }
+
+    .bet-table--3 th:last-of-type {
+        width: 8.2rem;
+    }
+}
