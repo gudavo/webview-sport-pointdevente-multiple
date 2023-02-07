@@ -78,7 +78,7 @@ ul, ol {
         --before-h2-background: linear-gradient(180deg, #207dff 0%, #207dff 98.75%);
         --bet-table-wrapper-border-color: var(--color-san-juan);
         --bet-table-wrapper-box-shadow: none;
-        --bet-table-tr-border-color: var(--color-pickled-bluewood);
+        --bet-table-tr-border-color: var(--color-san-juan);
         --bet-table-tr-first-border-color: var(--color-ebony);
         --bet-table-thead-th-bg-color: var(--color-cloud-burst-1);
         --bet-table-thead-th-border-color: var(--color-ebony);
