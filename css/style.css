@@ -26,12 +26,16 @@ ul, ol {
     --base-spacing-xl: 3.6rem;
     --color-white: #fff;
     --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    --font-title: ferveur;
     --font-body: montserrat, var(--font-fallback);
+    --size-counter-ordered-list: 2rem;
     --type-base-font-size: 1.6rem;
+    --type-base-font-size-text-m: 1.4rem;
     --type-base-font-size-text: 1.2rem;
     --type-base-font-size-text-xs: 1rem;
     --type-base-text: 500 var(--type-base-font-size-text) / var(--base-line-height) var(--font-body);
     --type-base-small-text: 500 var(--type-base-font-size-text-xs) / var(--base-line-height) var(--font-body);
+    --type-h1: 900 var(--type-base-font-size-text-m) / var(--base-line-height) var(--font-title);
     --type-h2: 600 var(--type-base-font-size) / var(--base-line-height) var(--font-body);
     --type-h2-before: 800 var(--type-base-font-size-text) / var(--base-line-height) var(--font-body);
     --type-table-td-text: var(--type-base-small-text);
@@ -43,12 +47,14 @@ ul, ol {
         --color-gallery: #ececec;
         --color-geyser: #d9dfe7;
         --color-prussian-blue: #00265a;
+        --color-link: var(--color-prussian-blue);
         --color-selago: #e8eefb;
         --color-tropical-blue: #d9e5f9;
         --body-background-color: var(--color-white);
         --body-color: var(--color-prussian-blue);
         --before-h2-color: var(--color-white);
         --before-h2-background: linear-gradient(180deg, #007aff 0%, #003ffc 98.75%);
+        --before-ordered-list-background: linear-gradient(180deg, #007aff 0%, #003ffc 98.75%);
         --bet-table-wrapper-border-color: var(--color-geyser);
         --bet-table-wrapper-box-shadow: inset -0.2rem 0 0.2rem rgb(0 0 0 / 25%);
         --bet-table-tr-border-color: var(--color-geyser);
@@ -59,6 +65,7 @@ ul, ol {
         --bet-table-tbody-th-bg-color: var(--color-selago);
         --bet-table-td-bg-color: var(--color-white);
         --divider-bg-color: var(--color-geyser);
+        --icon-warning-text: url(../images/warning-triangle-light.svg);
         --prono-list-item-border-bt-color: var(--color-geyser);
         --prono-list-item-before-bg-color: var(--color-prussian-blue);
     }
@@ -70,12 +77,14 @@ ul, ol {
         --color-cloud-burst-1: #1d2e46;
         --color-cloud-burst-2: #1c293d;
         --color-ebony: #121c2b;
+        --color-link: var(--color-white);
         --color-pickled-bluewood: #2e415b;
         --color-san-juan: #324b6f;
         --body-background-color: var(--color-ebony);
         --body-color: var(--color-white);
         --before-h2-color: var(--color-white);
-        --before-h2-background: linear-gradient(180deg, #207dff 0%, #207dff 98.75%);
+        --before-h2-background: linear-gradient(180deg, #207dff 0%, #207dff 98.75%); 
+        --before-ordered-list-background: linear-gradient(180deg, #207dff 0%, #207dff 98.75%);
         --bet-table-wrapper-border-color: var(--color-san-juan);
         --bet-table-wrapper-box-shadow: none;
         --bet-table-tr-border-color: var(--color-san-juan);
@@ -86,6 +95,7 @@ ul, ol {
         --bet-table-tbody-th-bg-color: var(--color-pickled-bluewood);
         --bet-table-td-bg-color: var(--color-ebony);
         --divider-bg-color: var(--color-san-juan);
+        --icon-warning-text: url(../images/warning-triangle-dark.svg);
         --prono-list-item-border-bt-color: var(--color-san-juan);
         --prono-list-item-before-bg-color: var(--color-chambray);
     }
@@ -134,6 +144,11 @@ body {
 }
 
 /* Heading */
+.title-modal {
+    font: var(--type-h1);
+    margin-bottom: 2.4rem;
+}
+
 .heading-h2 {
     font: var(--type-h2);
     margin-bottom: var(--base-spacing-sm);
@@ -174,6 +189,13 @@ body {
     font: var(--type-base-text);
 }
 
+/* Link text */
+.link-text {
+    color: var(--color-link);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 /* Lists */
 .caption-list {
     font: var(--type-base-small-text);
@@ -191,7 +213,7 @@ body {
 }
 
 .prono-list__item::before {
-    background: no-repeat center url(chevron.svg) var(--prono-list-item-before-bg-color);
+    background: no-repeat center url(../images/chevron.svg) var(--prono-list-item-before-bg-color);
     border-radius: 50%;
     color: var(--color-white);
     content: "";
@@ -202,6 +224,44 @@ body {
     top: 50%;
     transform: translateY(-50%);
     width: 1.4rem;
+}
+
+.list-intro {
+    font-size: var(--type-base-font-size-text-m);
+    font-weight: 600;
+}
+
+/* Ordered list */
+ol {
+    counter-reset: my-counter;
+    padding-left: 2.8rem;
+    /* --size-counter-ordered-list: 2rem + spacing .8rem */
+}
+
+.ordered-list__item {
+    counter-increment: my-counter;
+    font-weight: 500;
+    font-size: var(--type-base-font-size-text);
+    margin-bottom: 1.6rem;
+    position: relative;
+}
+
+.ordered-list__item::before {
+    align-items: center;
+    background: var(--before-ordered-list-background);
+    border-radius: 50%;
+    color: var(--color-white);
+    content: counter(my-counter);
+    display: inline-flex;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: var(--size-counter-ordered-list);
+    justify-content: center;
+    left: calc(-1 * var(--size-counter-ordered-list) - .8rem);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    width: var(--size-counter-ordered-list);
 }
 
 /* Table */
@@ -313,4 +373,37 @@ body {
     .bet-table--3 th:last-of-type {
         width: 8.2rem;
     }
+}
+
+/* Warning text */
+.warning-text {
+    font-size: var(--type-base-font-size-text);
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    padding-left: 2.8rem;
+    /* --size-counter-ordered-list: 2rem + spacing : .8rem */
+    position: relative;
+}
+
+.warning-text::before {
+    background: no-repeat center var(--icon-warning-text);
+    border-radius: 50%;
+    color: var(--color-white);
+    content: "";
+    font: var(--type-h2-before);
+    height: var(--size-counter-ordered-list);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: var(--size-counter-ordered-list);
+}
+
+.warning-text p:first-of-type {
+    margin-bottom: .8rem;
+}
+
+/* Supplement text */
+.suppl-text {
+    font-size: 1rem;
+    font-weight: 500;
 }
