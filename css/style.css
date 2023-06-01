@@ -48,6 +48,7 @@ ul, ol {
         --color-gallery: #ececec;
         --color-geyser: #d9dfe7;
         --color-prussian-blue: #00265a;
+        --color-link: var(--color-prussian-blue);
         --color-selago: #e8eefb;
         --color-tropical-blue: #d9e5f9;
         --color-waikaw-gray: #576F90;
