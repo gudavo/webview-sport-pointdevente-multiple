@@ -26,6 +26,7 @@ ul, ol {
     --base-spacing-xl: 2.8rem;
     --base-spacing-xxl: 3.6rem;
     --color-white: #fff;
+    --color-outrageous-orange: #ff5134;
     --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     --font-title: ferveur;
     --font-body: montserrat, var(--font-fallback);
@@ -397,4 +398,10 @@ body {
 .small-text {
     color: var(--small-color);
     font: var(--type-base-small-text);
+}
+
+/* Color text */
+.color-text {
+    color: var(--color-outrageous-orange);
+    font-weight: 700;
 }
