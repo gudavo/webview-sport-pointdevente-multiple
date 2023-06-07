@@ -228,11 +228,6 @@ body {
     width: 1.4rem;
 }
 
-.heading-text {
-    font-size: var(--type-base-font-size-text-m);
-    font-weight: 600;
-}
-
 /* Ordered list */
 .ordered-list {
     counter-reset: my-counter;
