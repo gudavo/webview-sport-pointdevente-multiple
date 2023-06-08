@@ -68,7 +68,7 @@ ul, ol {
         --link-color: var(--color-prussian-blue);
         --prono-list-item-border-bt-color: var(--color-geyser);
         --prono-list-item-before-bg-color: var(--color-prussian-blue);
-        --small-color: var( --color-waikaw-gray);
+        --small-color: var(--color-waikaw-gray);
         --svg-color: var(--color-prussian-blue);
     }
 }
@@ -231,7 +231,6 @@ body {
 /* Ordered list */
 .ordered-list {
     counter-reset: my-counter;
-    padding-left: var(--base-spacing-xl);
 }
 
 .ordered-list__item {
@@ -239,6 +238,7 @@ body {
     font-weight: 500;
     font-size: var(--type-base-font-size-text);
     margin-bottom: var(--base-spacing-md);
+    padding-left: var(--base-spacing-xl);
     position: relative;
 }
 
@@ -253,10 +253,8 @@ body {
     font-weight: 600;
     height: var(--size-counter-ordered-list);
     justify-content: center;
-    left: calc(-1 * var(--size-counter-ordered-list) - var(--base-spacing-sm));
-    line-height: 1;
+    left: 0;
     position: absolute;
-    top: 0;
     width: var(--size-counter-ordered-list);
 }
 
