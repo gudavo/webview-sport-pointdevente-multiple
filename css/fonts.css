@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "ferveur";
+    src: url(../fonts/ferveur-black-italic.woff2) format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../fonts/montserrat-extrabold.woff2) format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../fonts/montserrat-bold.woff2) format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../fonts/montserrat-semibold.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "montserrat";
+    src: url(../fonts/montserrat-medium.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
