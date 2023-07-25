@@ -1,1 +1,1 @@
-Webview d'aide aux paris multiples pour les apps PSPDVA
+Pages web statiques, notamment d'aide, pour affichage dans les apps PSPDV
