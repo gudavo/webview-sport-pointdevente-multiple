@@ -30,6 +30,7 @@ ul, ol {
     --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     --font-title: ferveur;
     --font-body: montserrat, var(--font-fallback);
+    --font-cotes: ferveur-cotes;
     --size-counter-ordered-list: 2rem;
     --type-base-font-size: 1.6rem;
     --type-base-font-size-text-m: 1.4rem;
@@ -40,22 +41,28 @@ ul, ol {
     --type-h1: 900 var(--type-base-font-size-text-m) / var(--base-line-height) var(--font-title);
     --type-h2: 600 var(--type-base-font-size) / var(--base-line-height) var(--font-body);
     --type-h2-before: 800 var(--type-base-font-size-text) / var(--base-line-height) var(--font-body);
+    --type-h2--section-title: var(--type-base-font-size) / var(--base-line-height) var(--font-title);
+    --type-h3: 700 var(--type-base-font-size) / var(--base-line-height) var(--font-body);
     --type-table-td-text: var(--type-base-small-text);
     --type-table-th-text: 600 var(--type-base-font-size-text-xs) / var(--base-line-height) var(--font-body);
 }
 
 @media (prefers-color-scheme: light) {
     :root {
+        --color-atlantis: #69d73c;
+        --color-blue-ribbon: #003ffc;
         --color-gallery: #ececec;
         --color-geyser: #d9dfe7;
         --color-prussian-blue: #00265a;
         --color-selago: #e8eefb;
+        --color-selago-bis: #f2f6fd;
         --color-tropical-blue: #d9e5f9;
         --color-waikaw-gray: #576F90;
         --body-background-color: var(--color-white);
         --body-color: var(--color-prussian-blue);
+        --before-background: linear-gradient(180deg, #007aff 0%, var(--color-blue-ribbon) 98.75%);
         --before-h2-color: var(--color-white);
-        --before-background: linear-gradient(180deg, #007aff 0%, #003ffc 98.75%);
+        --before-outcome-type-border: var(--color-white);
         --bet-table-wrapper-border-color: var(--color-geyser);
         --bet-table-wrapper-box-shadow: inset -0.2rem 0 0.2rem rgb(0 0 0 / 25%);
         --bet-table-tr-border-color: var(--color-geyser);
@@ -65,8 +72,19 @@ ul, ol {
         --bet-table-thead-th-first-bg-color: var(--color-tropical-blue);
         --bet-table-tbody-th-bg-color: var(--color-selago);
         --bet-table-td-bg-color: var(--color-white);
+        --bet-table-sample-thead-th-bg-color: var(--color-tropical-blue);
+        --block-example-bgcolor: var(--color-selago-bis);
+        --block-example-color: var(--color-prussian-blue);
         --divider-bg-color: var(--color-geyser);
+        --highlight-text-color: var(--color-blue-ribbon);
+        --img-validate-bets-step-1-img: url('../images/how-to-play/validate-bets-step-1-light.png');
+        --img-validate-bets-step-2-img: url('../images/how-to-play/validate-bets-step-2-light.png');
+        --img-validate-bets-step-3-img: url('../images/how-to-play/validate-bets-step-3-light.png');
         --link-color: var(--color-prussian-blue);
+        --outcome-bgcolor: var(--color-white);
+        --outcome-border: var(--color-atlantis);
+        --outcome-type-bgcolor: var(--color-atlantis);
+        --outcome-type-color: var(--color-prussian-blue);
         --prono-list-item-border-bt-color: var(--color-geyser);
         --prono-list-item-before-bg-color: var(--color-prussian-blue);
         --small-color: var(--color-waikaw-gray);
@@ -79,13 +97,16 @@ ul, ol {
         --color-chambray: #33517b;
         --color-cloud-burst-1: #1d2e46;
         --color-cloud-burst-2: #1c293d;
+        --color-dodger-blue: #207dff;
         --color-ebony: #121c2b;
+        --color-pastel-green: #89e067;
         --color-pickled-bluewood: #2e415b;
         --color-san-juan: #324b6f;
         --body-background-color: var(--color-ebony);
         --body-color: var(--color-white);
+        --before-background: linear-gradient(180deg, var(--color-dodger-blue) 0%, var(--color-dodger-blue) 98.75%);
         --before-h2-color: var(--color-white);
-        --before-background: linear-gradient(180deg, #207dff 0%, #207dff 98.75%);
+        --before-outcome-type-border: var(--color-ebony);
         --bet-table-wrapper-border-color: var(--color-san-juan);
         --bet-table-wrapper-box-shadow: none;
         --bet-table-tr-border-color: var(--color-san-juan);
@@ -95,8 +116,19 @@ ul, ol {
         --bet-table-thead-th-first-bg-color: var(--color-cloud-burst-2);
         --bet-table-tbody-th-bg-color: var(--color-pickled-bluewood);
         --bet-table-td-bg-color: var(--color-ebony);
+        --bet-table-sample-thead-th-bg-color: var(--color-cloud-burst-2);
+        --block-example-bgcolor: var(--color-cloud-burst-1);
+        --block-example-color: var(--color-white);
         --divider-bg-color: var(--color-san-juan);
+        --highlight-text-color: var(--color-dodger-blue);
+        --img-validate-bets-step-1-img: url('../images/how-to-play/validate-bets-step-1-dark.png');
+        --img-validate-bets-step-2-img: url('../images/how-to-play/validate-bets-step-2-dark.png');
+        --img-validate-bets-step-3-img: url('../images/how-to-play/validate-bets-step-3-dark.png');
         --link-color: var(--color-white);
+        --outcome-bgcolor: var(--color-ebony);
+        --outcome-border: var(--color-pastel-green);
+        --outcome-type-bgcolor: var(--color-pastel-green);
+        --outcome-type-color: var(--color-ebony);
         --prono-list-item-border-bt-color: var(--color-san-juan);
         --prono-list-item-before-bg-color: var(--color-chambray);
         --small-color: var( --color-white);
@@ -142,8 +174,16 @@ body {
     margin: 0 var(--base-spacing-md);
 }
 
+.mb-sm {
+    margin-bottom: var(--base-spacing-sm);
+}
+
 .mb-md {
     margin-bottom: var(--base-spacing-md);
+}
+
+.mt-sm {
+    margin-top: var(--base-spacing-sm);
 }
 
 /* Heading */
@@ -157,6 +197,11 @@ body {
     margin-bottom: var(--base-spacing-sm);
     padding-left: var(--base-spacing-xxl);
     position: relative;
+}
+
+.heading-h2--section-title {
+    font: var(--type-h2--section-title);
+    margin-bottom: var(--base-spacing-md);
 }
 
 .heading-h2::before {
@@ -185,6 +230,11 @@ body {
 
 .heading-h2--3::before {
     content: "3";
+}
+
+.heading-h3 {
+    font: var(--type-h3);
+    margin-bottom: var(--base-spacing-md);
 }
 
 /* Paragraph */
@@ -331,6 +381,16 @@ body {
     text-align: center;
 }
 
+/* table version 5 with normal height */
+.bet-table--sample thead th,
+.bet-table--sample td {
+    height: 2.4rem;
+}
+
+.bet-table--sample thead th {
+    background-color: var(--bet-table-sample-thead-th-bg-color);
+}
+
 @media (max-width: 480px) {
     .bet-table--1 th:nth-child(1) {
         width: 6rem;
@@ -405,4 +465,196 @@ body {
 .color-text {
     color: var(--color-outrageous-orange);
     font-weight: 700;
+}
+
+.highlight-text {
+    color: var(--highlight-text-color);
+}
+
+/* example */
+.block-example {
+    background-color: var(--block-example-bgcolor);
+    border-radius: 1.6rem;
+    color: var(--block-example-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-spacing-md);
+    padding: var(--base-spacing-md);
+    margin-bottom: var(--base-spacing-md);
+}
+
+.block-example--list {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block-example_title {
+    font-family: var(--font-title);
+    font-size: var(--type-base-font-size-text-m);
+    text-align: center;
+}
+
+.img-example {
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex: 0 0 auto;
+}
+
+.img-validate-bets-step-1 {
+    background-image: var(--img-validate-bets-step-1-img);
+    height: 9.4rem;
+    margin-right: -.7rem;
+    width: 13.6rem;
+}
+
+.img-validate-bets-step-2 {
+    background-image: var(--img-validate-bets-step-2-img);
+    height: 10.5rem;
+    margin-left: -.8rem;
+    margin-right: -1.3rem;
+    width: 14.9rem;
+}
+
+.img-validate-bets-step-3 {
+    background-image: var(--img-validate-bets-step-3-img);
+    height: 15.4rem;
+    margin-left: -1.5rem;
+    margin-right: -.8rem;
+    width: 15.1rem;
+}
+
+.img-validate-bets-step-4 {
+    background-image: url('../images/how-to-play/validate-bets-step-4.png');
+    height: 13.4rem;
+    width: 12.8rem;
+}
+
+.img-validate-bets-step-5 {
+    background-image: url('../images/how-to-play/validate-bets-step-5.png');
+    height: 11.5rem;
+    width: 13.2rem;
+}
+
+/* event item - match */
+.event-item_match {
+    display: flex;
+    gap: var(--base-spacing-sm);
+}
+
+.event-item_infos {
+    flex: 1;
+}
+
+.event-item_title {
+    font-size: var(--type-base-font-size-text-m);
+    font-weight: 700;
+}
+
+.event-item_league {
+    align-items: center;
+    display: inline-flex;
+    font: var(--type-base-text);
+    gap: var(--base-spacing-sm);
+    margin-bottom: var(--base-spacing-xs);
+}
+
+.event-item_time-bets {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-item_time,
+.event-item_handicap {
+    align-self: center;
+    font: var(--type-base-small-text);
+}
+
+.event-item_more-bets {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--base-spacing-xs);
+    font-size: var( --type-base-font-size-text);
+    white-space: nowrap;
+}
+
+.event-item_arrow path {
+    fill: var(--highlight-text-color);
+}
+
+/* market */
+.event-item_markets {
+    align-items: center;
+    display: flex;
+    gap: var(--base-spacing-sm);
+    justify-content: center;
+    margin-top: var(--base-spacing-sm);
+}
+
+/* outcome */
+.outcome {
+    background-color: var(--outcome-bgcolor);
+    border: .2rem solid var(--outcome-border);
+    display: inline-flex;
+    padding: .2rem .6rem .2rem .2rem;
+    flex: 1;
+    gap: var(--base-spacing-xs);
+}
+
+.outcome_type {
+    align-items: center;
+    background-color: var(--outcome-type-bgcolor);
+    color: var(--outcome-type-color);
+    display: inline-flex;
+    font-size: var(--type-base-font-size-text-m);
+    font-weight: 600;
+    justify-content: center;
+    position: relative;
+}
+
+.outcome .outcome_type::before {
+    content: "";
+    border-style: solid;
+    border-color: transparent transparent var(--before-outcome-type-border) transparent;
+    border-width: 0 0 2.8rem .8rem; 
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+.outcome .outcome_type {
+    height: 2.8rem;
+    padding-right: var(--base-spacing-sm);
+    min-width: 2.4rem;
+    max-width: 3.4rem;
+    width: 100%;
+}
+
+.outcome_value {
+    align-items: center;
+    display: inline-flex;
+    flex: 1;
+    font-family: var(--font-cotes);
+    font-size: 1.3rem;
+    justify-content: center;
+}
+
+/* Options list */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-spacing-sm);
+}
+
+.options-list li {
+    align-items: center;
+    display: inline-flex;
+}
+
+.options-list .outcome_type {
+    flex: 0 0 auto;
+    height: 2.4rem;
+    margin-right: var(--base-spacing-sm);
+    width: 2.4rem;
 }
