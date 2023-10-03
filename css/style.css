@@ -25,8 +25,10 @@ ul, ol {
     --base-spacing-lg: 2.4rem;
     --base-spacing-xl: 2.8rem;
     --base-spacing-xxl: 3.6rem;
-    --color-white: #fff;
+    --color-azure-radiance: #007aff;
+    --color-blue-ribbon: #003ffc;
     --color-outrageous-orange: #ff5134;
+    --color-white: #fff;
     --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     --font-title: ferveur;
     --font-body: montserrat, var(--font-fallback);
@@ -50,9 +52,9 @@ ul, ol {
 @media (prefers-color-scheme: light) {
     :root {
         --color-atlantis: #69d73c;
-        --color-blue-ribbon: #003ffc;
         --color-gallery: #ececec;
         --color-geyser: #d9dfe7;
+        --color-orange: #ff5722;
         --color-prussian-blue: #00265a;
         --color-selago: #e8eefb;
         --color-selago-bis: #f2f6fd;
@@ -75,17 +77,22 @@ ul, ol {
         --bet-table-sample-thead-th-bg-color: var(--color-tropical-blue);
         --block-example-bgcolor: var(--color-selago-bis);
         --block-example-color: var(--color-prussian-blue);
+        --button-primary-bg-color: var(--color-blue-ribbon);
+        --button-primary-color: var(--color-white);
         --divider-bg-color: var(--color-geyser);
         --highlight-text-color: var(--color-blue-ribbon);
         --link-color: var(--color-prussian-blue);
         --outcome-bgcolor: var(--color-white);
         --outcome-border: var(--color-atlantis);
+        --outcome-selected-bg-color: var(--color-orange);
+        --outcome-selected-border: var(--color-orange);
         --outcome-type-bgcolor: var(--color-atlantis);
         --outcome-type-color: var(--color-prussian-blue);
         --prono-list-item-border-bt-color: var(--color-geyser);
         --prono-list-item-before-bg-color: var(--color-prussian-blue);
         --small-color: var(--color-waikaw-gray);
         --svg-color: var(--color-prussian-blue);
+        --stepper-bg-color: rgba(0, 25, 100, 0.80);
     }
 
     /*
@@ -111,6 +118,7 @@ ul, ol {
         --color-chambray: #33517b;
         --color-cloud-burst-1: #1d2e46;
         --color-cloud-burst-2: #1c293d;
+        --color-coral: #ff8f4a;
         --color-dodger-blue: #207dff;
         --color-ebony: #121c2b;
         --color-pastel-green: #89e067;
@@ -133,17 +141,22 @@ ul, ol {
         --bet-table-sample-thead-th-bg-color: var(--color-cloud-burst-2);
         --block-example-bgcolor: var(--color-cloud-burst-1);
         --block-example-color: var(--color-white);
+        --button-primary-bg-color: #8aa7ff;
+        --button-primary-color: #142129;
         --divider-bg-color: var(--color-san-juan);
         --highlight-text-color: var(--color-dodger-blue);
         --link-color: var(--color-white);
         --outcome-bgcolor: var(--color-ebony);
         --outcome-border: var(--color-pastel-green);
+        --outcome-selected-bg-color: var(--color-coral);
+        --outcome-selected-border: var(--color-coral);
         --outcome-type-bgcolor: var(--color-pastel-green);
         --outcome-type-color: var(--color-ebony);
         --prono-list-item-border-bt-color: var(--color-san-juan);
         --prono-list-item-before-bg-color: var(--color-chambray);
         --small-color: var( --color-white);
         --svg-color: var(--color-white);
+        --stepper-bg-color: rgba(29, 46, 70, 0.80);
     }
 
     .img-validate-bets-step-1 {
@@ -619,7 +632,6 @@ body {
     display: inline-flex;
     padding: .2rem .6rem .2rem .2rem;
     flex: 1;
-    gap: var(--base-spacing-xs);
 }
 
 .outcome_type {
@@ -637,7 +649,7 @@ body {
     content: "";
     border-style: solid;
     border-color: transparent transparent var(--before-outcome-type-border) transparent;
-    border-width: 0 0 2.8rem .8rem; 
+    border-width: 0 0 2.8rem var(--base-spacing-sm); 
     bottom: 0;
     position: absolute;
     right: 0;
@@ -658,6 +670,25 @@ body {
     font-family: var(--font-cotes);
     font-size: 1.3rem;
     justify-content: center;
+    margin-left: var(--base-spacing-xs);
+}
+
+.outcome.selected {
+    background-color: var(--outcome-selected-bg-color);
+    border-color: var(--outcome-selected-border);
+}
+
+.outcome.selected .outcome_type {
+    background-color: var(--outcome-selected-bg-color);
+    color: var(--color-white);
+}
+
+.outcome.selected .outcome_type::before {
+    border: 0 none;
+}
+
+.outcome.selected .outcome_value {
+    color: var(--color-white);
 }
 
 /* Options list */
@@ -677,4 +708,54 @@ body {
     height: 2.4rem;
     margin-right: var(--base-spacing-sm);
     width: 2.4rem;
+}
+
+/* Stepper / Progress bar */
+.stepper {
+    background-color: var(--stepper-bg-color);
+    border-radius: 10rem;
+    padding: var(--base-spacing-sm);
+    transition: .5s linear;  
+    transition-property: width, background-color; 
+}
+
+.stepper_content {
+    background-color: #576f90;
+    border-radius: 10rem;
+    height: .8rem;
+    position: relative;
+}
+
+.stepper_content:after {
+    content: '';
+    background-color: var(--color-white);
+    border-radius: 10rem;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+/* Button */
+.button {
+    align-items: center;
+    border: 0 none;
+    border-radius: .6rem;
+    display: inline-flex;
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: var(--base-spacing-sm) var(--base-spacing-md);
+    text-decoration: none;
+}
+
+.button--primary {
+    background-color: var(--button-primary-bg-color);
+    color: var(--button-primary-color);
+    min-height: 4.8rem;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+    background-color: rgba(0, 53, 211, 1);
 }

@@ -1,0 +1,978 @@
+@keyframes stepper1 {
+    from { width: 5% }
+    to   { width: 25% }
+}
+
+@keyframes stepper2 {
+    from { width: 25% }
+    to   { width: 50% }
+}
+
+@keyframes stepper3 {
+    from { width: 50% }
+    to   { width: 75% }
+}
+
+@keyframes stepper4 {
+    from { width: 75% }
+    to   { width: 100% }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInOpacity20 {
+    0% {opacity: .2;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeOutOpacity20 {
+    0% {opacity: 1;}
+    100% {opacity: .2;}
+}
+
+@keyframes slideAway {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translate3d(110%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bookmark-color: #80a3f3;
+        --button-action-bg-color: linear-gradient(180deg, var(--color-azure-radiance) 0%, var(--color-blue-ribbon) 98.75%);
+        --content-border: #d9dde1;
+        --event-item-bg-color: var(--color-white);
+        --event-item-color: var(--color-prussian-blue);
+        --event-more-bets: #1d40fc;
+        --event-time-color: var(--color-waikaw-gray);
+        --header-bg-color: linear-gradient(90.1deg, #0050d2 -0.24%, #001964 99.91%);
+        --page-content-bg-color: #f7f8f9;
+        --page-opacity-bg-color: rgba(0, 20, 82, 0.90);
+
+        /* Background's Page - Page 1, 2 & 3 */
+        .page-1,
+        .page-2,
+        .page-3 {
+            background-image: 
+                url(../images/fictitious-bet/bg-page-1-2-light.svg),
+                url(../images/fictitious-bet/bg-navbar-light.svg);
+        }
+
+        /* Basket's button */
+        .button--basket {
+            background-image: url(../images/fictitious-bet/focus-basket-light.png);
+        }
+        
+        /* Tabs */
+        .tabs-basket {
+            background-image: url(../images/fictitious-bet/tabs-basket-light.png);
+        }
+
+        .tabs-qrcode {
+            background-image: url(../images/fictitious-bet/tabs-qrcode-light.png);
+        }
+
+        .tabs-simple {
+            background-image: url(../images/fictitious-bet/tabs-simple-light.png);
+        }
+
+        /* Content of tabs */
+        .content-basket {
+            background-image: url(../images/fictitious-bet/content-basket-light.png);
+        }
+
+        .content-basket-hover {
+            background-image: url(../images/fictitious-bet/content-basket-hover-light.png);
+        }
+        
+        .content-qrcode {
+            background-image: url(../images/fictitious-bet/content-qrcode-light.png);
+        }
+
+        .content-qrcode-hover {
+            background-image: url(../images/fictitious-bet/content-qrcode-hover-light.png);
+        }
+        
+        .content-simple-qrcode {
+            background-image: url(../images/fictitious-bet/content-simple-qrcode-light.png);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bookmark-color: #1c60bf;
+        --button-action-bg-color: linear-gradient(180deg, var(--color-dodger-blue) 0%, var(--color-dodger-blue) 98.75%);
+        --content-border: #344450;
+        --event-item-bg-color: var(--color-ebony);
+        --event-item-color: var(--color-white);
+        --event-more-bets: var(--color-dodger-blue);
+        --event-time-color: var(--color-white);
+        --header-bg-color: linear-gradient(90deg, var(--color-ebony) 0%, var(--color-ebony) 100%);
+        --page-content-bg-color: #192a34;
+        --page-opacity-bg-color: rgba(29, 46, 70, 0.90);
+
+        /* Popin background - Page 1, 2 & 3 */
+        .page-1,
+        .page-2,
+        .page-3 {
+            background-image: 
+                url(../images/fictitious-bet/bg-navbar-dark.svg),
+                url(../images/fictitious-bet/bg-page-1-2-dark.svg);
+        }
+
+        /* Basket's button */
+        .button--basket {
+            background-image: url(../images/fictitious-bet/focus-basket-dark.png);
+        }
+
+        /* Tabs */
+        .tabs-basket {
+            background-image: url(../images/fictitious-bet/tabs-basket-dark.png);
+        }
+
+        .tabs-qrcode {
+            background-image: url(../images/fictitious-bet/tabs-qrcode-dark.png);
+        }
+
+        .tabs-simple {
+            background-image: url(../images/fictitious-bet/tabs-simple-dark.png);
+        }
+
+        /* Content of tabs */
+        .content-basket {
+            background-image: url(../images/fictitious-bet/content-basket-dark.png);
+        }
+
+        .content-basket-hover {
+            background-image: url(../images/fictitious-bet/content-basket-hover-dark.png);
+        }
+        
+        .content-qrcode {
+            background-image: url(../images/fictitious-bet/content-qrcode-dark.png);
+        }
+
+        .content-qrcode-hover {
+            background-image: url(../images/fictitious-bet/content-qrcode-hover-dark.png);
+        }
+        
+        .content-simple-qrcode {
+            background-image: url(../images/fictitious-bet/content-simple-qrcode-dark.png);
+        }
+    }
+}
+
+/* Background's popin */
+.fictitious-bet {
+    background-repeat: no-repeat no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background's page */
+.page-1,
+.page-2,
+.page-3 {
+    background-position: 
+        bottom center,
+        top center;
+}
+
+/* Opacity on background-image */
+.page-1:before,
+.page-2:before,
+.page-3:before,
+.tabs:after {
+    background-color: var(--page-opacity-bg-color);
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.page-1:before,
+.page-2:before,
+.page-3:before {
+    height: 100vh;
+    top: 0;
+}
+
+.tabs:after {
+    height: calc(100vh - 4.8rem); /* 4.8rem : height's header with stepper */
+    top: 4.8rem;
+    z-index: 1;
+}
+
+.page-4 .fictitious-bet_content,
+.page-5 .fictitious-bet_content,
+.page-6 .fictitious-bet_content {
+    background-color: var(--page-content-bg-color);
+}
+
+/* Header who contains progress bar */
+.fictitious-bet_header {
+    background: var(--header-bg-color);
+    padding: 0 var(--base-spacing-md) var(--base-spacing-lg);
+    position: relative;
+    z-index: 1;
+}
+
+/* Stepper - Progress bar */
+.page-1 .stepper_content:after {
+    width: 5%;
+}
+
+.page-2 .stepper_content:after {
+    animation: stepper1 .5s forwards;
+    width: 25%;
+}
+
+.page-3 .stepper_content:after {
+    animation: stepper2 .5s 2s forwards;
+    width: 25%;
+}
+
+.page-4 .stepper_content:after,
+.page-5 .stepper_content:after {
+    width: 50%;
+}
+
+.page-5 .stepper_content:after {
+    animation: stepper3 .5s 1s forwards;
+}
+
+.page-6 .stepper_content:after {
+    animation: stepper4 .5s 1s forwards;
+    width: 75%;
+}
+
+/* Global block for content */
+.fictitious-bet_content {
+    color: var(--color-white);
+    height: calc(100vh - 4.8rem);
+}
+
+/* Global style content */
+.title-modal,
+.paragraph-text {
+    text-align: center;
+}
+
+.title-modal {
+    font-size: 1.8rem;
+    margin: 0 var(--base-spacing-lg) var(--base-spacing-md);
+}
+
+.paragraph-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 var(--base-spacing-md);
+}
+
+.button--zoning {
+    bottom: 1.1rem;
+    cursor: all-scroll;
+    height: 4.8rem;
+    position: absolute;
+    right: 0;
+}
+
+/* Event item */
+.event-item {
+    background-color: var(--event-item-bg-color);
+    color: var(--event-item-color);
+    display: flex;
+    flex-direction: column;
+    padding: var(--base-spacing-md);
+    text-align: left;
+}
+
+.event-item_match_picto {
+    margin-top: .6rem;
+}
+
+.event-item_infos_header {
+    display: inline-flex;
+    width: 100%;
+}
+
+.event-item_bookmark {
+    fill: var(--bookmark-color);
+    margin-left: auto;
+}
+
+.event-item_league {
+    gap: var(--base-spacing-xs);
+}
+
+.event-item_time {
+    color: var(--event-time-color);
+}
+
+.event-item_more-bets {
+    color: var(--event-more-bets);
+    font-weight: 700;
+}
+
+/* tabs */
+.tabs {
+    background: var(--header-bg-color);
+    height: 4.2rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+    .tabs {
+        height: 5rem;
+    }
+}
+
+[class*='tabs-'] {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 4.2rem;
+    margin: 0 auto;
+    width: 32rem;
+    z-index: 1;
+}
+
+@media screen and (min-width: 375px) {
+    [class*='tabs-'] {
+        height: 5rem;
+        width: 37.5rem;
+    }
+}
+
+/* Content of tabs */
+/* Content's block for these pages : 1, 2, 3 */
+.page-1 .fictitious-bet_content,
+.page-2 .fictitious-bet_content,
+.page-3 .part-1 {
+    display: grid;
+    grid-template-rows: 1fr 13.2rem 1fr;
+    position: relative;
+}
+
+.page-1 .fictitious-bet_content .title-modal,
+.page-2 .fictitious-bet_content .title-modal,
+.page-3 .part-1 .title-modal {
+    align-self: flex-end;
+}
+
+/* Content's block for these pages : 4, 5, 6 */
+[class*='content-'] {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+
+/*----------
+== Page 1 
+----------*/
+.page-1 .title-modal {
+    animation-delay: 1s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-1 .explanation {
+    text-align: center;
+}
+
+.page-1 .paragraph-text {
+    margin-bottom: var(--base-spacing-lg);
+    margin-top: 3.2rem;
+}
+
+.page-1 .paragraph-text,
+.page-1 .button {
+    animation-delay: 2s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+/*-------------
+== Page 2 & 3
+-------------*/
+.button--outcome {
+    color: inherit;
+    display: inline-flex;
+    font-weight: inherit;
+    padding: 0;
+    width: 100%;
+}
+
+.page-2 .outcome.disabled {
+    animation-delay: .1s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeOutOpacity20;
+    animation-timing-function: ease-in-out;
+}
+
+.page-2 .arrow-top,
+.page-3 .arrow-top {
+    margin: var(--base-spacing-sm) 0 var(--base-spacing-sm) 4vh;
+}
+
+.page-2 .title-modal,
+.page-2 .explanation {
+    animation-delay: .1s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-2 .paragraph-text,
+.page-3 .paragraph-text {
+    padding: 0 var(--base-spacing-lg);
+}
+
+/*----------
+== Page 3
+----------*/
+.page-3 .fictitious-bet_content {
+    display: flex;
+    justify-content: center;
+}
+
+.page-3 .outcome.selected {
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+}
+
+.page-3 .outcome.disabled {
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeInOpacity20;
+    animation-timing-function: ease-in-out;
+    opacity: .2;
+}
+
+.page-3 .part-1 {
+    animation-delay: 2s;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-name: fadeOut;
+    animation-timing-function: ease-in-out;
+    height: 100%;
+}
+
+.page-3 .part-2 {
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    bottom: 40vh;
+    opacity: 0;
+    position: fixed;
+}
+
+@media screen and (min-width: 375px) {
+    .page-3 .part-2 {
+        bottom: 38vh;
+    }
+}
+
+.page-3 .arrow-down {
+    bottom: 22vh;
+    position: fixed;
+    right: 14vh;
+}
+
+.button--basket {
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 8vh;
+    cursor: all-scroll;
+    height: 24vh;
+    position: fixed;
+    right: -5vh;
+    width: 24vh;
+}
+
+/*----------
+== Page 4
+----------*/
+.page-4 .fictitious-bet_content {
+    display: grid;
+    grid-template-rows: 5rem 35rem 1fr;
+}
+
+.button--action {
+    background: var(--button-action-bg-color);
+    border-radius: 0 0 .8rem .8rem;
+    color: var(--color-white);
+    display: block;
+    font-size: var(--type-base-font-size-text-m);
+    font-weight: 800;
+    padding: 1.2rem var(--base-spacing-md);
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.button_hover--action,
+.button--action:hover {
+    background: linear-gradient(180deg, var(--color-blue-ribbon) 0%, var(--color-azure-radiance) 98.75%);
+}
+
+.page-4 .fictitious-bet_content {
+    animation-duration: 1s;
+    animation-name: slideUp;
+    animation-timing-function: ease-in-out;
+}
+
+.page-4 .content {
+    height: 27.1rem;
+    width: 32rem;
+}
+
+@media screen and (min-width: 375px) {
+    .page-4 .content {
+        height: 31.6rem;
+        width: 37.3rem;
+    }
+}
+
+.page-4 .content {
+    margin: var(--base-spacing-md) auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.page-4 .tabs:after {
+    animation-delay: 1.5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-4 .button--zoning {
+    width: 100%;
+}
+
+.page-4 .explanation {
+    animation-delay: 1.5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: slideUp;
+    animation-timing-function: ease-in-out;
+    margin-bottom: var(--base-spacing-md);
+    opacity: 0;
+    overflow-y: auto;
+    margin: -3rem auto 0;
+    position: relative;
+    z-index: 2;
+}
+
+.page-4 .explanation .arrow-top,
+.page-5 .previous-page .arrow-top {
+    margin-left: 6rem;
+    margin-top: 1rem;
+}
+
+/*----------
+== Page 5
+----------*/
+.page-5 .fictitious-bet_content {
+    display: grid;
+    grid-template-rows: 5rem 35rem 1fr;
+}
+
+/* tabs */
+.page-5 .tabs:before {
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeOut;
+    background-color: var(--page-opacity-bg-color);
+    content: '';
+    height: calc(100vh - 4.8rem);
+    left: 0;
+    position: absolute;
+    top: 4.8rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.page-5 .tabs:after {
+    animation-delay: 2.5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-5 .tabs-qrcode {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+/* content */
+.page-5 .content {
+    display: inline-flex;
+    margin: var(--base-spacing-md) auto 0;
+    max-width: 37.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.page-5 .content .previous-page {
+    height: 27.1rem;
+    width: 32rem;
+}
+
+@media screen and (min-width: 375px) {
+    .page-5 .content .previous-page {
+        height: 31.6rem;
+        width: 37.3rem;
+    }
+}
+
+.page-5 .content .previous-page {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: slideAway;
+    z-index: 2;
+}
+
+.page-5 .content .present-page {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: slideInRight;
+    animation-timing-function: ease-in-out;
+    height: 23.8rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+@media screen and (min-width: 375px) {
+    .page-5 .content .present-page {
+        height: 28.2rem;
+        width: 37.3rem;
+    }
+}
+
+/* explanation */
+.page-5 .explanation {
+    align-self: self-start;
+    position: relative;
+    z-index: 2;
+}
+
+.page-5 .explanation .previous-page {
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeOut;
+    margin-top: -3rem;
+}
+
+.page-5 .explanation .present-page {
+    animation-delay: 2.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: slideUp;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: -8rem;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 375px) {
+    .page-5 .explanation .present-page {
+        top: -4rem;
+    }
+}
+
+.page-5 .button--zoning {
+    width: 50%;
+}
+
+.page-5 .explanation .present-page .title-modal,
+.page-6 .explanation .title-modal {
+    margin-top: 6rem;
+}
+
+.page-5 .explanation .qrcode,
+.page-6 .explanation .qrcode {
+    position: relative;
+}
+
+.page-5 .explanation .qrcode .arrow-top,
+.page-6 .explanation .qrcode .arrow-top  {
+    left: 1rem;
+    position: absolute;
+    top: -5rem;
+}
+
+/*----------
+== Page 6 
+----------*/
+.page-6 .fictitious-bet_content {
+    display: grid;
+    grid-template-rows: 5rem 35rem;
+    overflow: hidden;
+}
+
+.page-6 .tabs:before {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: fadeOut;
+    background-color: var(--page-opacity-bg-color);
+    content: '';
+    height: calc(100vh - 4.8rem);
+    left: 0;
+    position: absolute;
+    top: 4.8rem;
+    width: 100%;
+    z-index: 2;
+}
+
+.page-6 .tabs:after {
+    animation-delay: 3s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-6 .tabs-simple {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: slideInRight;
+    animation-timing-function: ease-in-out;
+    visibility: hidden;
+}
+
+/* content */
+.page-6 .content {
+    display: inline-flex;
+    margin: var(--base-spacing-md) auto 0;
+    max-width: 37.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.page-6 .content .previous-page {
+    height: 23.8rem;
+    width: 32rem;
+}
+
+@media screen and (min-width: 375px) {
+    .page-6 .content .previous-page {
+        height: 28.2rem;
+        width: 37.3rem;
+    }
+}
+
+.page-6 .content .previous-page {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: slideAway;
+    z-index: 2;
+}
+
+.page-6 .content .present-page {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: slideInRight;
+    animation-timing-function: ease-in-out;
+    background-color: var(--page-content-bg-color);
+    height: 33.5rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    width: 100%;
+}
+
+/* explanation */
+.page-6 .explanation {
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeOut;
+    position: relative;
+    top: -8rem;
+    z-index: 2;
+}
+
+@media screen and (min-width: 375px) {
+    .page-6 .explanation {
+        top: -4rem;
+    }
+}
+
+/* text for after : go to pdv */
+.page-6 .after-page {
+    align-items: center;
+    animation-delay: 3s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 4.8rem);
+    justify-content: space-between;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 2rem;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 4.8rem;
+    width: 100%;
+    z-index: 2;
+}
+
+.page-6 .after-page > .description {
+    overflow-y: auto;
+}
+
+.page-6 .after-page .title-modal {
+    text-shadow: .1rem .2rem 0 #1144c6;
+}
+
+.page-6 .after-page .img {
+    margin-top: .7rem;
+}
+
+@media screen and (min-width: 375px) {
+    .page-6 .after-page .img {
+        height: 16.7rem;
+        width: 16.7rem;
+    }
+}
+
+.page-6 .list_explanation {
+    margin: 4rem var(--base-spacing-lg) 0;
+    text-align: left;
+}
+
+.page-6 .list_explanation li {
+    display: grid;
+    grid-template-columns: var(--base-spacing-xxl) 1fr;
+    margin-bottom: 1.2rem;
+}
+
+.page-6 .list_explanation > svg {
+    margin-top: var(--base-spacing-xs);
+}
+
+.page-6 .list_explanation .step-1 {
+    animation-delay: 3.8s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-6 .list_explanation .step-2 {
+    animation-delay: 5.3s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-6 .list_explanation .step-3 {
+    animation-delay: 6.8s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.page-6 .buttons {
+    animation-delay: 8.3s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    margin-bottom: var(--base-spacing-lg);
+}
+
+.page-6 .button--link {
+    color: var(--color-white);
+    font-size: var(--type-base-font-size-text-m);
+    margin-top: var(--base-spacing-sm);
+}
