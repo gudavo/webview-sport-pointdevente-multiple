@@ -81,54 +81,53 @@
         --header-bg-color: linear-gradient(90.1deg, #0050d2 -0.24%, #001964 99.91%);
         --page-content-bg-color: #f7f8f9;
         --page-opacity-bg-color: rgba(0, 20, 82, 0.90);
+    }
+    /* Background's Page - Page 1, 2 & 3 */
+    .page-1,
+    .page-2,
+    .page-3 {
+        background-image: 
+            url('../images/fictitious-bet/bg-page-1-2-light.svg'),
+            url('../images/fictitious-bet/bg-navbar-light.svg');
+    }
 
-        /* Background's Page - Page 1, 2 & 3 */
-        .page-1,
-        .page-2,
-        .page-3 {
-            background-image: 
-                url(../images/fictitious-bet/bg-page-1-2-light.svg),
-                url(../images/fictitious-bet/bg-navbar-light.svg);
-        }
+    /* Basket's button */
+    .button--basket {
+        background-image: url('../images/fictitious-bet/focus-basket-light.png');
+    }
+    
+    /* Tabs */
+    .tabs-basket {
+        background-image: url('../images/fictitious-bet/tabs-basket-light.png');
+    }
 
-        /* Basket's button */
-        .button--basket {
-            background-image: url(../images/fictitious-bet/focus-basket-light.png);
-        }
-        
-        /* Tabs */
-        .tabs-basket {
-            background-image: url(../images/fictitious-bet/tabs-basket-light.png);
-        }
+    .tabs-qrcode {
+        background-image: url('../images/fictitious-bet/tabs-qrcode-light.png');
+    }
 
-        .tabs-qrcode {
-            background-image: url(../images/fictitious-bet/tabs-qrcode-light.png);
-        }
+    .tabs-simple {
+        background-image: url('../images/fictitious-bet/tabs-simple-light.png');
+    }
 
-        .tabs-simple {
-            background-image: url(../images/fictitious-bet/tabs-simple-light.png);
-        }
+    /* Content of tabs */
+    .content-basket {
+        background-image: url('../images/fictitious-bet/content-basket-light.png');
+    }
 
-        /* Content of tabs */
-        .content-basket {
-            background-image: url(../images/fictitious-bet/content-basket-light.png);
-        }
+    .content-basket-hover {
+        background-image: url('../images/fictitious-bet/content-basket-hover-light.png');
+    }
+    
+    .content-qrcode {
+        background-image: url('../images/fictitious-bet/content-qrcode-light.png');
+    }
 
-        .content-basket-hover {
-            background-image: url(../images/fictitious-bet/content-basket-hover-light.png);
-        }
-        
-        .content-qrcode {
-            background-image: url(../images/fictitious-bet/content-qrcode-light.png);
-        }
-
-        .content-qrcode-hover {
-            background-image: url(../images/fictitious-bet/content-qrcode-hover-light.png);
-        }
-        
-        .content-simple-qrcode {
-            background-image: url(../images/fictitious-bet/content-simple-qrcode-light.png);
-        }
+    .content-qrcode-hover {
+        background-image: url('../images/fictitious-bet/content-qrcode-hover-light.png');
+    }
+    
+    .content-simple-qrcode {
+        background-image: url('../images/fictitious-bet/content-simple-qrcode-light.png');
     }
 }
 
@@ -150,48 +149,48 @@
         .page-2,
         .page-3 {
             background-image: 
-                url(../images/fictitious-bet/bg-navbar-dark.svg),
-                url(../images/fictitious-bet/bg-page-1-2-dark.svg);
+                url('../images/fictitious-bet/bg-navbar-dark.svg'),
+                url('../images/fictitious-bet/bg-page-1-2-dark.svg');
         }
+    }
 
-        /* Basket's button */
-        .button--basket {
-            background-image: url(../images/fictitious-bet/focus-basket-dark.png);
-        }
+    /* Basket's button */
+    .button--basket {
+        background-image: url('../images/fictitious-bet/focus-basket-dark.png');
+    }
 
-        /* Tabs */
-        .tabs-basket {
-            background-image: url(../images/fictitious-bet/tabs-basket-dark.png);
-        }
+    /* Tabs */
+    .tabs-basket {
+        background-image: url('../images/fictitious-bet/tabs-basket-dark.png');
+    }
 
-        .tabs-qrcode {
-            background-image: url(../images/fictitious-bet/tabs-qrcode-dark.png);
-        }
+    .tabs-qrcode {
+        background-image: url('../images/fictitious-bet/tabs-qrcode-dark.png');
+    }
 
-        .tabs-simple {
-            background-image: url(../images/fictitious-bet/tabs-simple-dark.png);
-        }
+    .tabs-simple {
+        background-image: url('../images/fictitious-bet/tabs-simple-dark.png');
+    }
 
-        /* Content of tabs */
-        .content-basket {
-            background-image: url(../images/fictitious-bet/content-basket-dark.png);
-        }
+    /* Content of tabs */
+    .content-basket {
+        background-image: url('../images/fictitious-bet/content-basket-dark.png');
+    }
 
-        .content-basket-hover {
-            background-image: url(../images/fictitious-bet/content-basket-hover-dark.png);
-        }
-        
-        .content-qrcode {
-            background-image: url(../images/fictitious-bet/content-qrcode-dark.png);
-        }
+    .content-basket-hover {
+        background-image: url('../images/fictitious-bet/content-basket-hover-dark.png');
+    }
+    
+    .content-qrcode {
+        background-image: url('../images/fictitious-bet/content-qrcode-dark.png');
+    }
 
-        .content-qrcode-hover {
-            background-image: url(../images/fictitious-bet/content-qrcode-hover-dark.png);
-        }
-        
-        .content-simple-qrcode {
-            background-image: url(../images/fictitious-bet/content-simple-qrcode-dark.png);
-        }
+    .content-qrcode-hover {
+        background-image: url('../images/fictitious-bet/content-qrcode-hover-dark.png');
+    }
+    
+    .content-simple-qrcode {
+        background-image: url('../images/fictitious-bet/content-simple-qrcode-dark.png');
     }
 }
 
