@@ -210,18 +210,6 @@ body {
     margin: 0 var(--base-spacing-md);
 }
 
-.mb-sm {
-    margin-bottom: var(--base-spacing-sm);
-}
-
-.mb-md {
-    margin-bottom: var(--base-spacing-md);
-}
-
-.mt-sm {
-    margin-top: var(--base-spacing-sm);
-}
-
 /* Heading */
 .title-modal {
     font: var(--type-h1);
@@ -710,6 +698,11 @@ body {
     width: 2.4rem;
 }
 
+/* list */
+.list {
+    list-style: unset;
+}
+
 /* Stepper / Progress bar */
 .stepper {
     background-color: var(--stepper-bg-color);
@@ -758,4 +751,25 @@ body {
 .button--primary:hover,
 .button--primary:focus {
     background-color: rgba(0, 53, 211, 1);
+}
+
+/* Unit class */
+.mb-sm {
+    margin-bottom: var(--base-spacing-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--base-spacing-md);
+}
+
+.mt-sm {
+    margin-top: var(--base-spacing-sm);
+}
+
+.pl-lg {
+    padding-left: var(--base-spacing-lg);
+}
+
+.pl-0 {
+    padding-left: 0;
 }
